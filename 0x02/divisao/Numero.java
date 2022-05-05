@@ -1,7 +1,9 @@
 public class Numero { 
 	public static void dividir(int a, int b) {
+	
+	int divisao  = 0;
         
-        try{ int divisao = a/b;
+        try{ divisao = a/b;
         }
         
         catch(Exception e){ 
