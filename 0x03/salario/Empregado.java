@@ -4,6 +4,7 @@ public class Empregado {
 
     public double salarioFixo;
     public double valorBonus;
+    public double salarioTotal;
 
     public Empregado(double salarioFixo){
 
@@ -22,8 +23,11 @@ public class Empregado {
     }
 
     public double calcularSalarioTotal(Departamento departamento) {
+        if (departamento.alcancouMeta()){
+            salarioTotal = salarioFixo + valorBonus;
 
-        return salarioFixo + valorBonus;
+        }
+        return salarioTotal;
     }
 
         public double getSalarioFixo(){
