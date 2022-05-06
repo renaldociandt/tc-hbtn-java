@@ -1,4 +1,4 @@
-
+package salario;
 
 public class Empregado {
 
@@ -23,10 +23,8 @@ public class Empregado {
     }
 
     public double calcularSalarioTotal(Departamento departamento) {
-        if (departamento.alcancouMeta()){
-            salarioTotal = salarioFixo + valorBonus;
-
-        }
+        calcularBonus(departamento);
+            this.salarioTotal = salarioFixo + valorBonus;
         return salarioTotal;
     }
 
