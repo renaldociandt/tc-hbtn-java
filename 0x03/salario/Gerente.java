@@ -15,4 +15,15 @@ public class Gerente extends Empregado{
       return valorBonus;
 
     }
+
+    @Override
+    public double calcularSalarioTotal(Departamento departamento) {
+        if (departamento.alcancouMeta()){
+            salarioTotal = salarioFixo + valorBonus;
+
+        }
+        return salarioTotal;
+    }
+
+
 }
