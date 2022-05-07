@@ -4,52 +4,49 @@ import livraria.exceptions.AutorInvalidoException;
 import livraria.exceptions.LivroInvalidoException;
 
 public class Livro {
-    private String titulo;
-    private String autor;
-    private double preco;
-    public Livro(String titulo, String autor, double preco) throws AutorInvalidoException, LivroInvalidoException{
-        if (autor.contains(" ")) {
-            this.autor = autor;
+    public String titulo;
+    public String autor;
+    public double preco;
+    public Livro(String titulo, String autor, double preco)throws AutorInvalidoException, LivroInvalidoException{
+        this.setTitulo(titulo);
+        this.setAutor(autor);
+        this.setPreco(preco);
 
-        } else {
-            throw new LivroInvalidoException("Nome de autor invalido");
-
-        }
-        if (preco == 0) {
-            throw new AutorInvalidoException("Preco de livro invalido");
-        } else {
-            this.preco = preco;
-        }
-
-        if (titulo.length() >= 3) {
-            this.titulo = titulo;
-
-        } else {
-             throw new  AutorInvalidoException("Titulo de livro invalido");
-        }
     }
         public String getTitulo() {
             return titulo;
         }
 
-        public void setTitulo(String titulo) {
-            this.titulo = titulo;
+        public void setTitulo(String titulo) throws AutorInvalidoException {
+            if (titulo.length() >= 3) {
+                this.titulo = titulo;
+            } else {
+            throw new  AutorInvalidoException("Titulo de livro invalido");
+            }
         }
 
         public String getAutor() {
             return autor;
         }
 
-        public void setAutor(String autor) {
+        public void setAutor(String autor) throws LivroInvalidoException {
+        if (autor.contains(" ")) {
             this.autor = autor;
-        }
+        } else {
+                throw new LivroInvalidoException("Nome de autor invalido");
+            }
 
-        public double getPreco() {
+        }
+        public double getPreco(){
             return preco;
         }
 
-        public void setPreco(double preco){
-            this.preco = preco;
+        public void setPreco(double preco) throws AutorInvalidoException {
+            if (preco == 0) {
+                throw new AutorInvalidoException("Preco de livro invalido");
+            } else {
+                this.preco = preco;
+            }
         }
 
 }

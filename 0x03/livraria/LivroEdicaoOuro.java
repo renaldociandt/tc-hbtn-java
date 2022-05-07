@@ -10,8 +10,8 @@ public class LivroEdicaoOuro extends Livro {
     }
 
     @Override
-    public void setPreco(double preco) {
-        if (preco != 0)
-            this.setPreco(this.getPreco() + this.getPreco() * 0.3);
-        }
+    public double getPreco() {
+
+        return preco+preco*0.3;
+    }
 }
