@@ -1,4 +1,4 @@
-package livraria.exceptions;
+
 
 public class AutorInvalidoException extends Exception{
 
