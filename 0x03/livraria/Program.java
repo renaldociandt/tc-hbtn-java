@@ -1,7 +1,4 @@
 
-
-import livraria.exceptions.LivroInvalidoException;
-
 public class Program {
 
     public static void main(String[] args) {
