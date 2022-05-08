@@ -1,7 +1,5 @@
 
 
-import conta_basica.ContaBancariaBasica;
-
 public class ContaBancariaControlada extends ContaBancariaBasica {
 
     public double saldoMinimo;
