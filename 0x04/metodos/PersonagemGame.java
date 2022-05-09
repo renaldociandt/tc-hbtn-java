@@ -4,14 +4,18 @@ public class PersonagemGame {
     private String nome;
 
     public void tomarDano(int quantidadeDeDano){
-        while (this.getSaudeAtual() > 0) {
+        if (this.getSaudeAtual() - quantidadeDeDano < 0) {
+            this.setSaudeAtual(0);
+        }else {
             this.setSaudeAtual(this.getSaudeAtual() - quantidadeDeDano);
         }
     }
 
     public void receberCura(int quantidadeDeCura){
-        while (this.getSaudeAtual() < 100){
-            this.setSaudeAtual(this.getSaudeAtual() + quantidadeDeCura);
+        if ((this.getSaudeAtual() + quantidadeDeCura) > 100){
+            this.setSaudeAtual(100);
+        }else {
+            this.setSaudeAtual(this.getSaudeAtual() - quantidadeDeCura);
         }
     }
 
