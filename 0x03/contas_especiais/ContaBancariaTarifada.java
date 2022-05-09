@@ -1,7 +1,5 @@
 
-
-import conta_basica.ContaBancariaBasica;
-import conta_basica.exceptions.OperacaoInvalidaException;
+import exceptions.*;
 
 public class ContaBancariaTarifada extends ContaBancariaBasica {
 
