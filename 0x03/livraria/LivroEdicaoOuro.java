@@ -1,7 +1,5 @@
-package livraria;
 
-import livraria.exceptions.AutorInvalidoException;
-import livraria.exceptions.LivroInvalidoException;
+import exceptions.*;
 
 public class LivroEdicaoOuro extends Livro {
 
