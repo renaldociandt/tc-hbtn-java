@@ -1,10 +1,10 @@
 
 
-import conta_basica.exceptions.OperacaoInvalidaException;
+import exceptions.*;
 
 public class ContaBancariaBasica {
     private String numeracao;
-    public double saldo;
+    private double saldo;
     private double taxaJurosAnual;
 
     public ContaBancariaBasica(String numeracao, double taxaJurosAnual) {
