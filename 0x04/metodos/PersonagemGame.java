@@ -15,7 +15,7 @@ public class PersonagemGame {
         if ((this.getSaudeAtual() + quantidadeDeCura) > 100){
             this.setSaudeAtual(100);
         }else {
-            this.setSaudeAtual(this.getSaudeAtual() - quantidadeDeCura);
+            this.setSaudeAtual(this.getSaudeAtual() + quantidadeDeCura);
         }
     }
 
