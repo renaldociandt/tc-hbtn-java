@@ -1,9 +1,9 @@
 
 
 public class Retangulo extends FormaGeometrica {
-    protected double largura;
+    private double largura;
 
-    protected double altura;
+    private double altura;
 
     @Override
     public double area(){
