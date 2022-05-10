@@ -1,9 +1,8 @@
-
+package quadrado;
 
 public class Retangulo extends FormaGeometrica {
-    protected double largura;
-
-    protected double altura;
+    private double largura;
+    private double altura;
 
     @Override
     public double area(){
