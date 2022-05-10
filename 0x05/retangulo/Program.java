@@ -1,4 +1,3 @@
-package retangulo;
 
 public class Program {
 
