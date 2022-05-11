@@ -1,6 +1,12 @@
 
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.Locale;
+
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
+        Locale.setDefault(Locale.US);
         Quadrado quadrado = new Quadrado();
 
         quadrado.setLado(10);
@@ -12,7 +18,7 @@ public class Program {
 
         try {
             Field campoAltura = Retangulo.class.getDeclaredField("altura");
-            int modifierAltura = campoAltura.getModifiers();
+            int modifierAltura = ((Field) campoAltura).getModifiers();
             System.out.printf("Campo altura eh %s\n", Modifier.toString(modifierAltura));
 
             Field campoLargura = Retangulo.class.getDeclaredField("altura");
