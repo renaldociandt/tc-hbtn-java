@@ -17,8 +17,17 @@ public class Pedido{
             String nome = itens.getProduto().getClass().getSimpleName();
             String titulo = itens.getProduto().getTitulo();
             valor += itens.getProduto().obterPrecoLiquido() * itens.getQuantidade();
-            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n", nome, titulo, itens.getProduto().obterPrecoLiquido(), itens.getQuantidade(),(itens.getProduto().obterPrecoLiquido() * itens.getQuantidade()));
+            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n", nome, titulo,
+                    itens.getProduto().obterPrecoLiquido(), itens.getQuantidade(),(itens.getProduto().obterPrecoLiquido() * itens.getQuantidade()));
+
         }
+        descontos = ((this.percentualDesconto/100)*valor);
+        System.out.println("----------------------------");
+        System.out.printf("DESCONTO: %.2f\n", descontos);
+        System.out.printf("TOTAL PRODUTOS: %.2f\n", valor);
+        System.out.println("----------------------------");
+        System.out.printf("TOTAL PEDIDO: %.2f\n", this.calcularTotal());
+        System.out.println("----------------------------");
     }
 
     public double calcularTotal(){
