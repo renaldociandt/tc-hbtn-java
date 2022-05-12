@@ -1,3 +1,4 @@
+import produtos.*;
 
 import java.util.Locale;
 

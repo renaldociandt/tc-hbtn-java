@@ -1,5 +1,5 @@
 
-import produtos.Produto;
+import produtos.*;
 
 public class ItemPedido {
 
