@@ -1,5 +1,5 @@
-import produtos.*;
 
+import produtos.*;
 import java.util.Locale;
 
 public class Program {
