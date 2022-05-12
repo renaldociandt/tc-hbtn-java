@@ -1,12 +1,4 @@
-import produtos.*;
-public double calcularTotal(){
-        double total = 0;
-        for (ItemPedido x: item){
 
-        total = total + (x.getQuantidade() * x.getProduto().obterPrecoLiquido());
-        }
-        return total += total * percentualDesconto;
-        }
 
 import produtos.Produto;
 
