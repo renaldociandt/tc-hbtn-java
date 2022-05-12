@@ -1,4 +1,3 @@
-package resumo_pedido;
 
 import java.util.Locale;
 
