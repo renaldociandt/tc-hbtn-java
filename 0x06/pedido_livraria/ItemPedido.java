@@ -1,6 +1,6 @@
 
 
-import pedido_livraria.produtos.*;
+import produtos.Produto;
 
 public class ItemPedido {
 
