@@ -1,5 +1,5 @@
 
-import workflow.atividades.Atividade;
+import atividades.*;
 
 public class Workflow {
 
