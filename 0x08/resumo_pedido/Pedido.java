@@ -1,4 +1,5 @@
 import provedores.*;
+import resumo_pedido.provedores.Frete;
 
 public class Pedido {
 
