@@ -5,7 +5,7 @@ public class Loggi implements ProvedorFrete {
 
     @Override
     public double calcularFrete(double peso, double valor) {
-        if (peso > 50000) {
+        if (peso > 5000) {
             valorFrete = (valor * 0.12);
         } else {
             valorFrete = (valor * 4.0/100);
