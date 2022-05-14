@@ -8,7 +8,7 @@ public class Loggi implements ProvedorFrete {
         if (peso > 50000) {
             valorFrete = (valor * 0.12);
         } else {
-            valorFrete = (valor * 0.04);
+            valorFrete = (valor * 4.0/100);
         }
         return valorFrete;
     }
