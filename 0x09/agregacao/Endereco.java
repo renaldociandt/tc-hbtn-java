@@ -9,8 +9,8 @@ public class Endereco {
     private String estado;
     private String pais;
 
-    public Endereco(String logrador, String numero, String complemento, String bairro, String cidade, String estado, String pais) {
-        this.logrador = logrador;
+    public Endereco(String logradouro, String numero, String complemento, String bairro, String cidade, String estado, String pais) {
+        this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
@@ -19,12 +19,12 @@ public class Endereco {
         this.pais = pais;
     }
 
-    public String getLogrador() {
-        return logrador;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public void setLogrador(String logrador) {
-        this.logrador = logrador;
+    public void setLogradouro(String logrador) {
+        this.logradouro = logrador;
     }
 
     public String getNumero() {
