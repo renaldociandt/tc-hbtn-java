@@ -4,7 +4,7 @@ public class InteiroPositivo {
 
     public int valor;
 
-    public InteiroPositivo(int valor) {
+    public InteiroPositivo(Integer valor) {
         this.valor = valor;
     }
 
