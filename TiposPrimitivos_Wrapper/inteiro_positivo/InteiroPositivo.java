@@ -2,9 +2,10 @@
 
 public class InteiroPositivo {
 
-    public int valor;
+    private int valor;
 
     public InteiroPositivo(Integer valor) {
+
         this.valor = valor;
     }
 
