@@ -19,7 +19,7 @@ public class Tarefa {
         if (descricao != null && !descricao.isEmpty()){
             this.setDescricao(descricao);
         }else{
-            exception();
+            throw new IllegalAccessException("Descricao de tarefa invalida");
         }
 
     }
@@ -48,7 +48,4 @@ public class Tarefa {
         this.identificador = identificador;
     }
 
-    public static void exception() throws IllegalAccessException {
-        throw new IllegalAccessException("Descricao de tarefa invalida");
-    }
 }
