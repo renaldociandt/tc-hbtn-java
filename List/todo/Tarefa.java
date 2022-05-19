@@ -10,16 +10,16 @@ public class Tarefa {
 
     }
 
-    public Tarefa(String descricao, int identificador) throws IllegalAccessException {
+    public Tarefa(String descricao, int identificador) throws IllegalArgumentException {
         this.modificarDescricao(descricao);
         this.identificador = identificador;
     }
 
-    public void modificarDescricao(String descricao) throws IllegalAccessException {
+    public void modificarDescricao(String descricao) throws IllegalArgumentException {
         if (descricao != null && !descricao.isEmpty()){
             this.setDescricao(descricao);
         }else{
-            throw new IllegalAccessException("Descricao de tarefa invalida");
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         }
 
     }

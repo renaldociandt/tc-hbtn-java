@@ -10,12 +10,12 @@ public class ListaTodo {
         this.tarefas = new ArrayList<Tarefa>();
     }
 
-    public void adicionarTarefa(Tarefa tarefa) throws IllegalAccessException {
+    public void adicionarTarefa(Tarefa tarefa) throws IllegalArgumentException {
 
         for (Tarefa x: tarefas) {
 
             if (x.getIdentificador() == tarefa.getIdentificador()){
-                throw new IllegalAccessException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista" );
+                throw new IllegalArgumentException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista" );
             }
         }
         tarefas.add(tarefa);
@@ -44,15 +44,16 @@ public class ListaTodo {
     }
 
     public void desfazerTodas(){
-        for (int i = 0; i < tarefas.size(); i++){
-            tarefas.get(i).setEstahFeita(false);
+        for (Tarefa tarefa : tarefas) {
+            tarefa.setEstahFeita(false);
 
         }
     }
 
     public void fazerTodas(){
-        for (int i = 0; i < tarefas.size(); i++){
-            tarefas.get(i).setEstahFeita(true);
+
+        for (Tarefa tarefa : tarefas) {
+            tarefa.setEstahFeita(true);
 
         }
     }
