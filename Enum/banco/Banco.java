@@ -64,7 +64,7 @@ public class Banco {
 
                     for (int j = 0; j < buscarAgencia(nomeAgencia).getClientes().get(i).getTransacoes().size(); j++) {
 
-                        System.out.println("  [" + (j + 1) + "]" + " Valor " + buscarAgencia(nomeAgencia).getClientes().get(i).getTransacoes().get(j));
+                        System.out.println("  [" + (j + 1) + "]" + " valor " + buscarAgencia(nomeAgencia).getClientes().get(i).getTransacoes().get(j));
                     }
                 }
             }
