@@ -6,7 +6,7 @@ import java.util.List;
 public class Cliente {
 
     private String nome;
-    private List<Double> transacoes = new ArrayList<>();
+    private ArrayList<Double> transacoes = new ArrayList<>();
 
     public Cliente(String nome, double transacoes) {
         this.nome = nome;

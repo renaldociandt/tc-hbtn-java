@@ -6,10 +6,11 @@ import java.util.List;
 public class Banco {
 
     private String nome;
-    private List<Agencia> agencias = new ArrayList<>();
+    private List<Agencia> agencias;
 
     public Banco(String nome) {
         this.nome = nome;
+        this.agencias = new ArrayList<Agencia>();
 
     }
 
