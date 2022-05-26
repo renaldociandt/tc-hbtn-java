@@ -1,3 +1,4 @@
+package duplicados;
 
 import java.util.*;
 public class NumerosDuplicados {
