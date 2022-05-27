@@ -13,7 +13,7 @@ public class Blog {
         posts.add(post);
     }
 
-    public TreeSet<Post> obterPostsPorAutor(Autor autor){
+    public Set<Post> obterPostsPorAutor(Autor autor){
         TreeSet<Post> map = new TreeSet<>();
         for (Post cont: posts) {
             if (Objects.equals(cont.autor.getNome(), autor.getNome())){
@@ -24,18 +24,16 @@ public class Blog {
         return map;
     }
 
-    public HashSet<Autor> obterTodosAutores(){
+    public Set<Autor> obterTodosAutores(){
 
-        HashSet<Autor> autores = new HashSet<>();
+        TreeSet<Autor> autores = new TreeSet<>();
         for (Post post : posts) {
-            if (post.corpo != null) {
                 autores.add(post.autor);
-            }
         }
         return autores;
     }
 
-    public TreeSet<Post> obterPostsPorCategoria(Categorias categorias) {
+    public Set<Post> obterPostsPorCategoria(Categorias categorias) {
         TreeSet<Post> categoria = new TreeSet<>();
         for (Post cont : posts) {
             if (cont.categoria == categorias) {
@@ -45,7 +43,7 @@ public class Blog {
         return categoria;
     }
 
-    public TreeMap<Categorias, Integer> obterContagemPorCategoria() {
+    public Map<Categorias, Integer> obterContagemPorCategoria() {
         TreeMap<Categorias, Integer> map = new TreeMap<>();
         for (int i = 0; i < posts.size(); i++) {
             Integer count = 0;
@@ -70,8 +68,8 @@ public class Blog {
         return map;
     }
 
-    public HashMap<Autor, Set<Post>> obterTodosPostsPorAutor(){
-        HashMap<Autor, Set<Post>> map = new HashMap<>();
+    public Map<Autor, Set<Post>> obterTodosPostsPorAutor(){
+        TreeMap<Autor, Set<Post>> map = new TreeMap<>();
         for(Post cont: posts){
             if (cont.autor == cont.getAutor()){
                 map.put(cont.autor, obterPostsPorAutor(cont.autor));
