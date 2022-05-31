@@ -6,7 +6,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-        Locale.setDefault(new Locale("pt", "BR"));
+        //Locale.setDefault(new Locale("pt", "BR"));
         Produto produto1 = new Produto(129.99, "Mouse Gamer");
 
         System.out.printf("%s - %.2f - %.2f\n", produto1.getNome(),
