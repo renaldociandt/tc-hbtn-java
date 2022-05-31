@@ -1,5 +1,4 @@
 
-
 public class Program {
 
     public static void main(String[] args) {
@@ -7,13 +6,13 @@ public class Program {
 
         quadrado.setLado(10);
 
-        if (Retangulo.class.isAssignableFrom(Quadrado.class))
+        if (quadrado.Retangulo.class.isAssignableFrom(Quadrado.class))
             System.out.println("Quadrado eh uma subclasse de Retangulo");
         else
             System.out.println("Quadrado nao eh uma subclasse de Retangulo");
 
         try {
-            Field campoAltura = Retangulo.class.getDeclaredField("altura");
+            Field campoAltura = quadrado.Retangulo.class.getDeclaredField("altura");
             int modifierAltura = campoAltura.getModifiers();
             System.out.printf("Campo altura eh %s\n", Modifier.toString(modifierAltura));
 

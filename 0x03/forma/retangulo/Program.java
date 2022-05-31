@@ -1,3 +1,4 @@
+package forma.retangulo;
 
 public class Program {
 

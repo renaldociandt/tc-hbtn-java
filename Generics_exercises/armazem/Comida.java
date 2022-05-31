@@ -1,4 +1,4 @@
-
+package armazem;
 
 public class Comida {
     private String nome;

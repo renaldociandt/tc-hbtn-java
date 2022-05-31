@@ -1,4 +1,4 @@
-
+package forma.retangulo;
 
 public class FormaGeometrica {
 

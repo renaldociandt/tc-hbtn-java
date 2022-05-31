@@ -1,3 +1,5 @@
+package armazem;
+
 import java.util.Locale;
 
 public class Program {
