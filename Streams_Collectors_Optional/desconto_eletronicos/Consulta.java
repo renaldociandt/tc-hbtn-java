@@ -1,4 +1,4 @@
-package pedidos_eletronico;
+
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -21,9 +21,8 @@ public class Consulta {
         return produtoList.stream().filter(p-> p.getPreco() >= precoMinimo).collect(Collectors.toList());
     }
 
-    public static List<Pedido> obterPedidosComEletronicos(List<Pedido> pedidoList){
-        return pedidoList.stream().filter(pedido -> pedido.getProdutos().stream().anyMatch(f -> f.getCategoria() == CategoriaProduto.ELETRONICO)).collect(Collectors.toList());
-
-    }
+    public static List<Produto> aplicar15PorcentoDescontoEletronicos(List<Produto> produtoList){
+        return produtoList.stream().peek(produto -> { if (produto.getCategoria() == CategoriaProduto.ELETRONICO) produto.setPreco(produto.getPreco() - (produto.getPreco() *0.15));
+        }).collect(Collectors.toList());}
 
 }

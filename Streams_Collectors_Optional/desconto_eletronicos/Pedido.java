@@ -1,4 +1,4 @@
-package pedidos_eletronico;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +25,5 @@ public class Pedido {
 
     public Cliente getCliente() {
         return cliente;
-    }
-
-    @Override
-    public String toString(){
-
-        return "[" + getCodigo() + "] " + cliente.getNome();
     }
 }
