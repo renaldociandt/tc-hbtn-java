@@ -1,4 +1,4 @@
-package maior_preco;
+
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,4 +16,8 @@ public class Consulta {
     public static Produto obterProdutoMaiorPreco(List<Produto> produtoList){
         return produtoList.stream().sorted(Comparator.comparing(Produto::getPreco).reversed()).collect(Collectors.toList()).get(0);
     }
+
+    public static List<Produto> obterProdutosPorPrecoMinimo(List<Produto> produtoList, double precoMinimo){
+        return produtoList.stream().filter(p-> p.getPreco() >= precoMinimo).collect(Collectors.toList());    }
+
 }
