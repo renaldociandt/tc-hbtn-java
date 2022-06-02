@@ -11,7 +11,4 @@ public class Consulta {
         return pedido.getProdutos().stream().filter(produto -> produto.getCategoria() == CategoriaProduto.LIVRO).collect(Collectors.toList());
     }
 
-    public static Produto obterProdutoMaiorPreco(List<Produto> produtoList){
-        return produtoList.stream().sorted(Comparator.comparing(Produto::getPreco).reversed()).collect(Collectors.toList()).get(0);
-    }
 }

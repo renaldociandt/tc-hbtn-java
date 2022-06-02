@@ -1,4 +1,4 @@
-package maior_preco;
+
 
 public enum CategoriaProduto {
 
