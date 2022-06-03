@@ -13,9 +13,8 @@ public class NumerosDuplicados {
             if (mapHash.contains(x)) {
                 mapSet.add(x);
 
-            } else {
-                mapHash.add(x);
             }
+                mapHash.add(x);
         }
         return mapSet;
     }
