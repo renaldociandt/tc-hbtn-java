@@ -1,4 +1,4 @@
-package media_salario_por_cargo;
+
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -24,6 +24,11 @@ public class ConsultaPessoas {
     public static Map<String, Double> obterMediaSalarioPorCargo(List<Pessoa> pessoaList){
 
         return pessoaList.stream().collect(Collectors.groupingBy(Pessoa::getCargo ,Collectors.averagingDouble(Pessoa::getSalario)));
+
+    }
+
+    public static Map<String, TreeSet<String>> obterHobbiesPorCargo(List<Pessoa> pessoaList){
+        return pessoaList.stream().collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.flatMapping(pessoa -> pessoa.getHobbies().stream(),Collectors.toCollection(TreeSet::new))));
 
     }
 }

@@ -1,4 +1,7 @@
-package media_salario_por_cargo;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pessoa implements Comparable<Pessoa>{
     private int codigo;
@@ -6,13 +9,16 @@ public class Pessoa implements Comparable<Pessoa>{
     private String cargo;
     private int idade;
     private double salario;
+    private List<String> hobbies = new ArrayList<>();
 
-    public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
+
+    public Pessoa(int codigo, String nome, String cargo, int idade, double salario, List<String> hobbies) {
         this.codigo = codigo;
         this.nome = nome;
         this.cargo = cargo;
         this.idade = idade;
         this.salario = salario;
+        this.hobbies = hobbies;
     }
 
     public int getCodigo() {
@@ -33,6 +39,10 @@ public class Pessoa implements Comparable<Pessoa>{
 
     public double getSalario() {
         return salario;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
     }
 
     @Override
