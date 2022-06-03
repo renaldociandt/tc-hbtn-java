@@ -1,4 +1,4 @@
-package media_salario_por_cargo;
+
 
 public class Pessoa implements Comparable<Pessoa>{
     private int codigo;
