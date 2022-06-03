@@ -1,4 +1,4 @@
-package quantidade_pessoas_por_cargo_idade;
+package media_salario_por_cargo;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -18,6 +18,12 @@ public class ConsultaPessoas {
     public static Map<String, Map<Integer, Long>> obterContagemPessoasPorCargoEIdade(List<Pessoa> pessoaList){
 
         return pessoaList.stream().collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.groupingBy(Pessoa::getIdade,Collectors.counting())));
+
+    }
+
+    public static Map<String, Double> obterMediaSalarioPorCargo(List<Pessoa> pessoaList){
+
+        return pessoaList.stream().collect(Collectors.groupingBy(Pessoa::getCargo ,Collectors.averagingDouble(Pessoa::getSalario)));
 
     }
 }
