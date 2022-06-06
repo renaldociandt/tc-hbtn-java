@@ -1,6 +1,4 @@
 
-
-import serializacao.Estudante;
 import java.util.List;
 
 public class Program {
