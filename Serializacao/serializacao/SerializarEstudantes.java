@@ -39,6 +39,8 @@ public class SerializarEstudantes <Estudante> {
 
     }
 
+
+    @SuppressWarnings("unchecked")
     public List<Estudante> desserializar() {
 
         List<Estudante> estudantes = new ArrayList<>();
